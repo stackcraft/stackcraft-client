@@ -1,0 +1,15 @@
+{
+  "users": "Users",
+  "roles": "Roles",
+  "settings": "Settings",
+  "avatar": "Avatar",
+  "email": "Email",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "language": "Language",
+  "created": "Created",
+  "add-user": "Add user",
+  "view-user": "View user",
+  "delete-user": "Delete user",
+  "update": "Update"
+}

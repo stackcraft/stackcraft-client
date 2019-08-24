@@ -1,0 +1,111 @@
+{
+  "name": "@stackcraft/client",
+  "description": "Client side StackCraft source code",
+  "version": "0.1.0",
+  "private": true,
+  "repository": "git@github.com:stackcraft/stackcraft-client.git",
+  "scripts": {
+    "start": "yarn serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "concurrently \"yarn:lint:*\"",
+    "lint:css": "stylelint '**/*.vue' --syntax scss",
+    "lint:js": "vue-cli-service lint --no-fix",
+    "test": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "apollo-boost": "0.4.3",
+    "apollo-cache-inmemory": "1.6.2",
+    "apollo-client": "2.6.3",
+    "apollo-fetch": "0.7.0",
+    "apollo-link": "1.2.12",
+    "apollo-link-context": "1.0.18",
+    "apollo-link-error": "1.1.11",
+    "apollo-link-http": "1.5.15",
+    "apollo-link-retry": "2.2.14",
+    "apollo-link-ws": "1.0.18",
+    "apollo-utilities": "1.3.2",
+    "core-js": "3.1.4",
+    "dotenv": "8.0.0",
+    "graphql": "14.4.2",
+    "graphql-tag": "2.10.1",
+    "lodash": "4.17.14",
+    "moment": "2.24.0",
+    "register-service-worker": "1.6.2",
+    "subscriptions-transport-ws": "0.9.16",
+    "vue": "2.6.10",
+    "vue-apollo": "3.0.0-rc.2",
+    "vue-clickaway": "2.2.2",
+    "vue-custom-scrollbar": "1.1.0",
+    "vue-i18n": "8.12.0",
+    "vue-router": "3.0.7",
+    "vue-simple-svg": "1.3.2"
+  },
+  "devDependencies": {
+    "@stackcraft/eslint-config": "0.1.3",
+    "@vue/cli-plugin-babel": "3.9.2",
+    "@vue/cli-plugin-eslint": "3.9.2",
+    "@vue/cli-plugin-pwa": "3.9.0",
+    "@vue/cli-plugin-unit-jest": "3.9.0",
+    "@vue/cli-service": "3.9.3",
+    "@vue/eslint-config-airbnb": "4.0.1",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.8.0",
+    "concurrently": "4.1.1",
+    "eslint": "6.0.1",
+    "eslint-plugin-fp": "2.3.0",
+    "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-jest": "22.10.0",
+    "eslint-plugin-lodash-fp": "2.2.0-a1",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-security": "1.4.0",
+    "eslint-plugin-vue": "5.2.3",
+    "husky": "3.0.0",
+    "postcss-normalize": "8.0.1",
+    "postcss-preset-env": "6.7.0",
+    "postcss-responsive-type": "1.0.0",
+    "stylelint": "10.1.0",
+    "stylelint-config-standard": "18.3.0",
+    "stylelint-processor-html": "1.0.0",
+    "vue-cli-plugin-env": "1.0.0",
+    "vue-cli-plugin-i18n": "0.6.0",
+    "vue-cli-plugin-moment": "0.1.1",
+    "vue-template-compiler": "2.6.10"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test"
+    }
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ],
+    "testURL": "http://localhost/",
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ]
+  }
+}

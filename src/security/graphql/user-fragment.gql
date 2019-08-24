@@ -1,0 +1,13 @@
+fragment User on User {
+  id
+  email
+  firstName
+  lastName
+  avatar
+  created
+  updated
+  roles
+  super
+  settings
+}
+

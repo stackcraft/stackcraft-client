@@ -1,0 +1,7 @@
+#import "./user-fragment.gql"
+
+subscription userDeleted {
+  userDeleted {
+    ...User
+  }
+}
